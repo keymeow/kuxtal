@@ -1,0 +1,62 @@
+kuxtal-app/
+├── client/                                     # FRONTEND (React + Tailwind)
+│   ├── public/                                 # Archivos estáticos (index.html, favicon)
+│   ├── src/
+│   │   ├── assets/                             # Imágenes, logos e iconos de Kuxtal
+│   │   │   └── images/                         # Guardaremos aquí las interfaces y fotos estáticas
+│   │   ├── components/                         # Componentes reutilizables
+│   │   │   └── layout/                         # Componentes de estructura:
+│   │   │       ├── Topbar.jsx                  # Barra superior (Perfil, Notificaciones)
+│   │   │       ├── Sidebar.jsx                 # Menú lateral (Escritorio)
+│   │   │       ├── BottomNav.jsx               # Menú inferior (Móvil)
+│   │   │       └── Layout.jsx                  # Contenedor que organiza los 3 anteriores
+│   │   ├── context/                            # Estados globales (ej. Datos del usuario logueado)
+│   │   │   └──AuthContext.jsx                  #
+│   │   ├── hooks/                              # Lógica de React personalizada
+│   │   ├── pages/                              # Vistas completas de la app
+│   │   │   ├── auth/                           # Contiene Login, Registro
+│   │   │   │   ├──Login.jsx                    # Login
+│   │   │   │   └──SignUp.jsx                   # Registro
+│   │   │   ├── Home.jsx                        # Pantalla principal
+│   │   │   ├── AgendarCita.jsx                 # Pantalla de agendar cita nutricion
+│   │   │   ├── CitaAgendada.jsx                # Pantalla Cita agendada nutricion
+│   │   │   ├── CuestionarioNutricion.jsx       # Cuestionario de nutrición
+│   │   │   ├── ElegirEspecialista.jsx          # Seleccion de nutriologa
+│   │   │   ├── InfoEspecialista.jsx            # Informacion de la nutriologa
+│   │   │   ├── MiPerfil.jsx                    # Pantalla de MiPerfil
+│   │   │   ├── Nutricion.jsx                   # Pantalla de informacion de para que sirve nutricion
+│   │   │   ├── UnderConstruction.jsx           # Pagina provisional "en construccion"
+│   │   │   └── Profile.jsx                     # Perfil y edición de datos
+│   │   ├── routes/                             # Configuración de react-router-dom
+│   │   │   ├── AppRoutes.jsx                   # 
+│   │   │   └── ProtecteddRoute.jsx             # 
+│   │   ├── App.jsx                             # Componente principal
+│   │   ├── index.css                           # Configuración de Tailwind CSS
+│   │   └── index.js                            # Punto de entrada de React
+│   ├── postcss.config.js                       #
+│   ├── tailwind.config.js
+│   ├── package-lock.json                       # 
+│   └── package.json                            # Dependencias del cliente
+│
+├── server/                                     # BACKEND (Node.js + Express)
+│   ├── routes/
+│   │   ├── citas.js                            # Logica de las citas
+│   ├── src/
+│   │   ├── controllers/                        # Lógica de negocio (ej. qué pasa al agendar)
+│   │   │   └── authController.js
+│   │   ├── middlewares/                        # Seguridad (ej. validar el token JWT)
+│   │   │   └── authMiddleware.js
+│   │   ├── models/                             # Definición de esquemas o consultas SQL
+│   │   ├── routes/                             # Definición de rutas de la API (/api/login)
+│   │   │   └── appointmentRoutes.js            #
+│   │   │   └── authRoutes.js                   #
+│   │   │   └── userRoutes.js                   #
+│   │   └── index.js                            # Punto de entrada del servidor
+│   ├── .env                                    #
+│   └── package.json                            # Dependencias del servidor
+│
+├── database/                                   # BASE DE DATOS
+│   └── init.sql                                # Script de creación de tablas inicial
+│
+├── estructura_proyecto.txt
+└── .gitignore                                  # Archivos que Git no debe subir

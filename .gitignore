@@ -1,0 +1,11 @@
+node_modules/
+.env
+server/.env
+server/uploads/*
+!server/uploads/.gitkeep
+dist/
+build/
+.DS_Store
+
+# Ignore internal MCP/Codacy instruction file
+.github/instructions/codacy.instructions.md

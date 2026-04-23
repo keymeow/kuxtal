@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── BASE GLOBAL ─────────────────────────────────────────────────────────── */
+
+@layer base {
+    html {
+        font-family: 'Inter', sans-serif;
+        background-color: #f8f9ff;
+        color: #434656;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        letter-spacing: -0.02em;
+    }
+}
+
+/* ─── FULLCALENDAR — KUXTAL THEME ─────────────────────────────────────────── */
+
+/* 1. Fondo y reseteo de bordes */
+.fc .fc-view-harness {
+    background-color: #fff;
+}
+
+.fc-theme-standard td,
+.fc-theme-standard th {
+    border-color: #eef2f7;
+}
+
+.fc-theme-standard .fc-scrollgrid {
+    border: none;
+}
+
+/* 2. Cabecera */
+.fc .fc-toolbar-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #434656;
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+}
+
+.fc .fc-button-primary {
+    background-color: transparent;
+    border: none;
+    color: #2260FF;
+    padding: 0.25rem;
+}
+
+.fc .fc-button-primary:hover,
+.fc .fc-button-primary:focus {
+    background-color: #d4e5ef;
+    color: #2260FF;
+    box-shadow: none !important;
+}
+
+/* 3. Días de la semana */
+.fc-col-header-cell-cushion {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #2260FF;
+    letter-spacing: 0.05em;
+    padding: 8px 0 !important;
+}
+
+/* 4. Celdas de días */
+.fc-daygrid-day-number {
+    font-size: 12px;
+    color: #434656;
+    padding: 4px !important;
+}
+
+.fc-daygrid-day:hover {
+    background-color: #f0f6fc;
+    cursor: pointer;
+}
+
+/* 5. Día seleccionado */
+.fc-day-selected-kuxtal {
+    background-color: #2260FF !important;
+    border-radius: 8px;
+}
+
+.fc-day-selected-kuxtal .fc-daygrid-day-number {
+    color: #fff !important;
+    font-weight: bold;
+}
